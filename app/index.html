@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — all 55 PS5 trophies</title>
+<meta name="description" content="Offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI: every official name, description and grade, a cited guide per trophy, a roadmap to the platinum, missable flags, and a checklist that saves in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; unofficial fan guide</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">Every one of the 55 official trophies — name, description and grade as
+  PlayStation publishes them — with a guide in our own words that cites its
+  sources, a roadmap to the platinum, and a tracker that saves in your browser.
+  Works fully offline: this page loads nothing from the network.</p>
+  <div class="progress-wrap" role="status" aria-label="trophy progress">
+    <div class="progress-line"><span id="progressText">0 of 55 earned</span><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="progress-sub"><span id="gradeCounts"></span></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab active" data-view="guide" id="tab-guide">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap" id="tab-roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="about" id="tab-about">Sources &amp; method</button>
+</nav>
+
+<main>
+<section id="view-guide" class="view">
+  <div class="controls">
+    <label class="search">Search
+      <input id="search" type="search" placeholder="Trophy, mission, place… e.g. meditation, vault, drone" autocomplete="off">
+    </label>
+    <fieldset class="filters" id="kindFilters" aria-label="Filter by kind">
+      <legend>Kind</legend>
+    </fieldset>
+    <label class="ctl">Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="ctl check"><input id="earnedOnly" type="checkbox"> Earned only</label>
+    <label class="ctl check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+    <div class="io">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="importBtn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button">Reset</button>
+    </div>
+  </div>
+  <p class="hint" id="resultCount"></p>
+  <p class="missable-banner" id="missableBanner"></p>
+  <div id="trophyList" class="trophy-list"></div>
+</section>
+
+<section id="view-roadmap" class="view hidden">
+  <h2>Roadmap to the platinum — “Vice Got a Price!”</h2>
+  <p class="lede">One playthrough is enough, around 200 hours in total, and everything is
+  single-player: no online trophies, no difficulty trophies, no mission medals.
+  Free roam carries on after the credits, so almost everything can be finished
+  after the story — with one exception in Chapter 1. Keep cheats off your trophy
+  run: they switch trophies and saving off.</p>
+  <div class="roadmap-stages" id="roadmapStages"></div>
+  <h3>The 100% completion checklist</h3>
+  <p>After the credits, open <strong>Progress &gt; Stats &gt; 100% Completion</strong>.
+  Everything you did before the credits already counts, and nothing on the
+  checklist is missable. It asks for, in full: every robbery (all 8 bank vaults
+  and all 39 gang operations), every underwater discovery, a gold medal in every
+  Shooting Range challenge, all drone races, and all 15 of Bret’s Target Decks.
+  The rest is a share: 100 optional missions, 200 of 277 vehicle scans, 100 of
+  255 animal studies, 15 of 18 meditations, 70 of 80 challenges, 300 stunts and
+  100 WAiNK scans. The trophy “A Long Road” pops when the checklist hits 100%.</p>
+  <p class="cite">Roadmap and checklist figures: GTABase, “GTA 6 Trophy Guide &amp;
+  Achievements List” — see Sources &amp; method.</p>
+</section>
+
+<section id="view-about" class="view hidden">
+  <h2>Sources &amp; method</h2>
+  <p>Every trophy’s <strong>name, description and grade</strong> is shown as
+  PlayStation publishes the list — the kit’s list agrees with Exophase and
+  PSNProfiles on all 55 names, descriptions and grades. The <strong>guides are
+  written in our own words for this page</strong>; they draw on the guides below
+  and cite them beside each trophy, so a reader can check every specific
+  location or step. Nothing is copied from another guide.</p>
+  <ul class="sources" id="sourceList"></ul>
+  <h3>How the flags were decided</h3>
+  <ul>
+    <li><strong>Hidden:</strong> the 28 trophies PlayStation hides until earned —
+    the story chapters and missions, the stranger quest finales, and the
+    one-off moments with cryptic descriptions.</li>
+    <li><strong>Missable:</strong> only “Positive Mental Attitude” is flagged
+    missable. GTABase and PowerPyx both flag it as the one trophy that may be
+    missable: a Chapter 1 meditation with Lucia disappears after that chapter,
+    and the game has no mission replay. Every other trophy stays available in
+    free roam after the story.</li>
+    <li><strong>Kind:</strong> story, side quests, collectibles, activities,
+    robbery, exploration, or one-off moments — from what the official
+    description asks for.</li>
+  </ul>
+  <h3>Your progress stays yours</h3>
+  <p>Ticking a trophy saves it in this browser only (localStorage). Export
+  downloads a JSON file; import reads that file back. Nothing is uploaded
+  anywhere, and the page makes no network request at all.</p>
+  <p class="fineprint">Unofficial fan guide, not affiliated with Rockstar Games
+  or PlayStation. No Rockstar logo, artwork, box art or game screenshots are
+  used anywhere on this page. Trophy names and descriptions are reproduced as
+  PlayStation publishes them.</p>
+</section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — built for the make.fun “Build the best GTA 6 trophy
+  guide” bounty. <span id="footCount"></span></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

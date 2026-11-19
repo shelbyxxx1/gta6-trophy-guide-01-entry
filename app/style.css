@@ -1,0 +1,231 @@
+/* Leonida Trophy Guide — original styling, no external assets.
+   Deep dusk purple with Vice City pink/cyan accents; system fonts only. */
+
+:root {
+  --ink: #f2eef7;
+  --ink-dim: #c9c0d8;
+  --bg: #171226;
+  --panel: #221a38;
+  --panel-2: #2b2145;
+  --line: #453a66;
+  --pink: #ff5da2;
+  --cyan: #39d5e8;
+  --gold: #ffc857;
+  --green: #7be495;
+  --red: #ff7a6b;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.masthead {
+  padding: 28px 20px 18px;
+  background: linear-gradient(135deg, #2a1745 0%, #171226 55%, #0e2a33 100%);
+  border-bottom: 3px solid var(--pink);
+}
+
+.kicker {
+  margin: 0 0 6px;
+  color: var(--cyan);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 { margin: 0 0 8px; font-size: 2.1rem; line-height: 1.1; }
+h2 { font-size: 1.45rem; margin: 0 0 10px; }
+h3 { font-size: 1.1rem; margin: 22px 0 8px; }
+
+.lede { max-width: 72ch; color: var(--ink-dim); margin: 0 0 14px; }
+
+.progress-wrap { max-width: 720px; }
+.progress-line {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.progress-bar {
+  height: 12px;
+  border-radius: 999px;
+  background: #0f0b1c;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  margin: 6px 0;
+}
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--pink), var(--cyan));
+  transition: width 0.25s ease;
+}
+.progress-sub { margin: 0; color: var(--ink-dim); font-size: 0.9rem; }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px 0;
+  flex-wrap: wrap;
+}
+.tab {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  padding: 9px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.tab.active { background: var(--pink); border-color: var(--pink); color: #1c0b16; font-weight: 700; }
+
+main { padding: 18px 20px 30px; max-width: 1080px; margin: 0 auto; }
+.hidden { display: none; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: end;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.controls label { font-size: 0.85rem; color: var(--ink-dim); display: grid; gap: 4px; }
+.controls input[type="search"], .controls select {
+  background: #0f0b1c;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+}
+.search input { min-width: 260px; }
+.filters { border: 0; padding: 0; margin: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.filters legend { font-size: 0.85rem; color: var(--ink-dim); padding: 0; margin-bottom: 4px; }
+.chip {
+  border: 1px solid var(--line);
+  background: #0f0b1c;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+.chip.active { background: var(--cyan); border-color: var(--cyan); color: #08222a; font-weight: 700; }
+.ctl.check { display: flex; align-items: center; gap: 6px; flex-direction: row; }
+.io { display: flex; gap: 8px; flex-wrap: wrap; }
+.io button, .importBtn {
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.importBtn input { display: none; }
+
+.hint { color: var(--ink-dim); margin: 0 0 10px; font-size: 0.92rem; }
+.missable-banner {
+  margin: 0 0 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--gold);
+  border-left: 5px solid var(--gold);
+  border-radius: 8px;
+  background: #33270e;
+  font-size: 0.95rem;
+}
+.missable-banner:empty { display: none; }
+
+.trophy-list { display: grid; gap: 12px; }
+.trophy {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.trophy.earned { border-color: var(--green); }
+.trophy-head { display: flex; gap: 12px; align-items: flex-start; }
+.trophy-head input[type="checkbox"] { width: 22px; height: 22px; margin-top: 3px; accent-color: var(--green); flex: none; }
+.trophy-title { flex: 1; min-width: 0; }
+.trophy-name { font-size: 1.08rem; font-weight: 750; margin: 0; }
+.trophy-desc { margin: 2px 0 0; color: var(--ink-dim); }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 3px 9px;
+  border: 1px solid var(--line);
+  color: var(--ink-dim);
+}
+.badge.platinum { background: var(--cyan); color: #08222a; border-color: var(--cyan); }
+.badge.gold { background: var(--gold); color: #33270e; border-color: var(--gold); }
+.badge.silver { background: #d7dbe2; color: #23272e; border-color: #d7dbe2; }
+.badge.bronze { background: #c98a4b; color: #2a1a08; border-color: #c98a4b; }
+.badge.missable { background: #3a1410; color: var(--red); border-color: var(--red); }
+.badge.hidden { background: #0f0b1c; color: var(--cyan); border-color: var(--cyan); }
+.badge.kind { background: transparent; }
+.trophy-count { color: var(--cyan); font-size: 0.88rem; font-weight: 600; }
+
+.trophy-guide { margin: 12px 0 0; }
+.trophy-guide summary {
+  cursor: pointer;
+  color: var(--cyan);
+  font-weight: 650;
+}
+.trophy-guide p { margin: 8px 0; }
+.trophy-guide .timing { color: var(--gold); font-size: 0.92rem; }
+.trophy-guide .unconfirmed {
+  border-left: 4px solid var(--gold);
+  padding: 6px 10px;
+  background: #33270e;
+  border-radius: 0 8px 8px 0;
+}
+.src { font-size: 0.88rem; color: var(--ink-dim); }
+.src a { color: var(--cyan); }
+.spoiler-note {
+  color: var(--ink-dim);
+  font-style: italic;
+  margin: 10px 0 0;
+}
+
+.roadmap-stages { display: grid; gap: 12px; margin: 14px 0; }
+.stage {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.stage h3 { margin-top: 0; }
+.stage .stage-trophies { color: var(--ink-dim); font-size: 0.93rem; }
+.stage .stage-trophies strong { color: var(--ink); }
+.cite { color: var(--ink-dim); font-size: 0.9rem; }
+.sources li { margin-bottom: 8px; }
+.sources a { color: var(--cyan); }
+.fineprint { color: var(--ink-dim); font-size: 0.88rem; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 16px 20px 26px;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.6rem; }
+  .search input { min-width: 0; width: 100%; }
+  .trophy-head { flex-wrap: wrap; }
+}
